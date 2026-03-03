@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <meta charset="UTF-8">
+  <title>Karuzela Jansenbooks</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
-<body>
-  <div class="products-carousel">
-    <div><img src="zdjecie1.jpg" alt="Produkt 1"><h3>Książka 1</h3><a href="amazon-link1">Kup</a></div>
-    <div><img src="zdjecie2.jpg" alt="Produkt 2"><h3>Książka 2</h3><a href="amazon-link2">Kup</a></div>
-    <!-- Dodaj więcej divów z produktami -->
-  </div>
-
-  <script>
-  $('.products-carousel').slick({
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: true,
-    infinite: true,
-    slidesToShow: 3,
-    responsive: [{breakpoint: 768, settings: {slidesToShow: 1}}]
-  });
-  </script>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <!-- Twój GA4 Measurement ID np. G-ABC123XYZ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWOJ-ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-TWWZFC3DN1'); // Wpisz swój GA ID
+    gtag('config', 'G-TWWZFC3DN1');  <!-- Zmień na swoje z Analytics -->
+  </script>
+  <style>
+    .products-carousel { max-width: 1200px; margin: auto; }
+    .products-carousel div { text-align: center; padding: 10px; }
+    .products-carousel img { max-width: 100%; height: 300px; object-fit: cover; }
+  </style>
+</head>
+<body>
+  <div class="products-carousel">
+    <div>
+      <img src="zdjecie1.jpg" alt="Książka 1">  <!-- Uploaduj swoje zdjęcia -->
+      <h3>Książka 1 - 29zł</h3>
+      <a href="https://amazon.com/dp/TWOJ-ASIN1?tag=jansenbooks-20" target="_blank">Kup na Amazon</a>
+    </div>
+    <div>
+      <img src="zdjecie2.jpg" alt="Książka 2">
+      <h3>Książka 2 - 35zł</h3>
+      <a href="https://amazon.com/dp/TWOJ-ASIN2?tag=jansenbooks-20" target="_blank">Kup na Amazon</a>
+    </div>
+	<div>
+      <img src="zdjecie3.jpg" alt="Książka 3">
+      <h3>Książka 3 - 35zł</h3>
+      <a href="https://amazon.com/dp/TWOJ-ASIN2?tag=jansenbooks-20" target="_blank">Kup na Amazon</a>
+    </div>
+    <!-- Dodaj więcej <div> z produktami -->
+  </div>
+
+  <script>
+  $('.products-carousel').slick({
+    autoplay: true,          // Auto-przewijanie
+    autoplaySpeed: 4000,     // Co 4 sekundy
+    arrows: true,            // Strzałki lewo/prawo
+    dots: true,              // Kropki na dole
+    infinite: true,          // Nieskończona pętla
+    slidesToShow: 3,         // 3 produkty na raz
+    responsive: [
+      {breakpoint: 1024, settings: {slidesToShow: 2}},
+      {breakpoint: 768, settings: {slidesToShow: 1}}
+    ]
+  });
   </script>
 </body>
 </html>
