@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+  <div class="products-carousel">
+    <div><img src="zdjecie1.jpg" alt="Produkt 1"><h3>Książka 1</h3><a href="amazon-link1">Kup</a></div>
+    <div><img src="zdjecie2.jpg" alt="Produkt 2"><h3>Książka 2</h3><a href="amazon-link2">Kup</a></div>
+    <!-- Dodaj więcej divów z produktami -->
+  </div>
+
+  <script>
+  $('.products-carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 3,
+    responsive: [{breakpoint: 768, settings: {slidesToShow: 1}}]
+  });
+  </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TWWZFC3DN1'); // Wpisz swój GA ID
+  </script>
+</body>
+</html>
